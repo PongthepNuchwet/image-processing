@@ -7,14 +7,20 @@ def drawLineCircle(cx, xy, red, borderSize, img):
     for x in range((a-r), (a+r)):
         for y in range((b-r), (b+r)):
             if (x-a)**2 + (y-b)**2 <= r**2:
-                img[x, y] = 255
+                try:
+                    img[x, y] = 255
+                except :
+                    pass
 
     r = red - borderSize
 
     for x in range((a-r), (a+r)):
         for y in range((b-r), (b+r)):
             if (x-a)**2 + (y-b)**2 <= r**2:
-                img[x, y] = 000
+                try:
+                    img[x, y] = 000
+                except :
+                    pass
 
 if __name__ == "__main__": 
     
